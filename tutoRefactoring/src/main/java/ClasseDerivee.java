@@ -9,6 +9,6 @@ public class ClasseDerivee extends BaseClass{
      * @return  - 2*number
      */
     private int doubleValue(int number) {
-        return number + number;
+        return 2*number;
     }
 }
