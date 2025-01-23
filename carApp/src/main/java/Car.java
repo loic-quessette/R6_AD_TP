@@ -1,4 +1,6 @@
 public class Car {
+    private static final int MAX_SPEED = 120;
+    public static final int TEN = 10;
     private String model;
     private String color;
     private int speed;
@@ -14,8 +16,8 @@ public class Car {
     }
 
     public void accelerate() {
-        if (120 >= this.speed + 10) {
-            this.speed += 10;
+        if (MAX_SPEED >= this.speed + TEN) {
+            this.speed += TEN;
             // afficher détails
             this.printDetails();
         } else {
@@ -30,8 +32,8 @@ public class Car {
     }
 
     public void slowDown() {
-        if (0 <= this.speed - 10) {
-            this.speed -= 10;
+        if (0 <= this.speed - TEN) {
+            this.speed -= TEN;
             // afficher détails
             this.printDetails();
         } else {
