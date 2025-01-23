@@ -17,13 +17,13 @@ public class Car {
         if (120 >= this.speed + 10) {
             this.speed += 10;
             // afficher détails
-            this.extracted();
+            this.printDetails();
         } else {
             System.out.println("La vitesse maximale est atteinte.");
         }
     }
 
-    private void extracted() {
+    private void printDetails() {
         System.out.println("Modèle : " + this.model);
         System.out.println("Couleur : " + this.color);
         System.out.println("Vitesse actuelle : " + this.speed);
@@ -33,7 +33,7 @@ public class Car {
         if (0 <= this.speed - 10) {
             this.speed -= 10;
             // afficher détails
-            this.extracted();
+            this.printDetails();
         } else {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
