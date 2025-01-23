@@ -1,0 +1,7 @@
+Dans la classe Voiture, dans les fonctions ralentir et accelerer, un bout de code est répété.
+On peut donc extraire ce code pour éviter les répétitions
+La fonction demarrerVoiture devrait être une fonction membre de la classe Voiture.
+Idem pour arreterVoiture et changerVitesse.
+Il faudrait rajouter des getters et setters pour les attributs de la classe Conducteur et rajouter une
+propriété dans la classe Voiture pour stocker le conducteur.
+Il faudrait modifier tous les noms pour les mettre en anglais.

@@ -8,23 +8,23 @@ public class Conducteur {
     }
 
     public boolean estAdulte() {
-        return age >= 10;
+        return 18 <= this.age;
     }
 
     public void demarrerVoiture(Voiture voiture) {
-        if (estAdulte()) {
-            System.out.println(nom + " démarre la voiture.");
+        if (this.estAdulte()) {
+            System.out.println(this.nom + " démarre la voiture.");
         } else {
             System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
         }
     }
 
     public void arreterVoiture(Voiture voiture) {
-        System.out.println(nom + " arrête la voiture.");
+        System.out.println(this.nom + " arrête la voiture.");
     }
 
     public void changerVitesse(Voiture voiture, int nouvelleVitesse) {
-        System.out.println(nom + " change la vitesse de la voiture à " + nouvelleVitesse);
+        System.out.println(this.nom + " change la vitesse de la voiture à " + nouvelleVitesse);
         int vitesseActuelle;
         if (voiture.getVitesse() >= nouvelleVitesse) {
             while (voiture.getVitesse() > nouvelleVitesse) {
