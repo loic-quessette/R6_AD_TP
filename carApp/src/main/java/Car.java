@@ -14,24 +14,26 @@ public class Car {
     }
 
     public void accelerate() {
-        if (speed + 10 <= 120) {
-            speed += 10;
+        if (120 >= this.speed + 10) {
+            this.speed += 10;
             // afficher détails
-            System.out.println("Modèle : " + this.model);
-            System.out.println("Couleur : " + this.color);
-            System.out.println("Vitesse actuelle : " + this.speed);
+            this.extracted();
         } else {
             System.out.println("La vitesse maximale est atteinte.");
         }
     }
 
+    private void extracted() {
+        System.out.println("Modèle : " + this.model);
+        System.out.println("Couleur : " + this.color);
+        System.out.println("Vitesse actuelle : " + this.speed);
+    }
+
     public void slowDown() {
-        if (speed - 10 >= 0) {
-            speed -= 10;
+        if (0 <= this.speed - 10) {
+            this.speed -= 10;
             // afficher détails
-            System.out.println("Modèle : " + this.model);
-            System.out.println("Couleur : " + this.color);
-            System.out.println("Vitesse actuelle : " + this.speed);
+            this.extracted();
         } else {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
