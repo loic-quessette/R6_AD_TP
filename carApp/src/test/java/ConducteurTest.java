@@ -4,29 +4,30 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ConducteurTest {
 
+    public static final int CHANGE_SPEED = 80;
     private Driver conducteur;
 
     @BeforeEach
     public void setUp() {
-        conducteur = new Driver("John", 20);
+        this.conducteur = new Driver("John", 20);
     }
 
     @Test
     public void testEstAdulte() {
-        assertThat(conducteur.isAdult()).isTrue();
+        assertThat(this.conducteur.isAdult()).isTrue();
     }
 
     @Test
     public void testDemarrerVoiture() {
         Car voiture = new Car("Sedan", "Bleu");
-        voiture.startCar(conducteur);
+        voiture.startCar(this.conducteur);
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
     public void testArreterVoiture() {
         Car voiture = new Car("Sedan", "Bleu");
-        voiture.stopCar(conducteur);
+        voiture.stopCar(this.conducteur);
         // How to assert that the arreterVoiture method was called?
     }
 
@@ -34,7 +35,7 @@ public class ConducteurTest {
     public void testChangerVitesse() {
         Car voiture = new Car("Sedan", "Bleu");
 
-        voiture.changeSpeed(80, conducteur);
-        assertThat(voiture.getSpeed()).isEqualTo(80);
+        voiture.changeSpeed(CHANGE_SPEED, this.conducteur);
+        assertThat(voiture.getSpeed()).isEqualTo(CHANGE_SPEED);
     }
 }
